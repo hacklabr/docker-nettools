@@ -2,7 +2,7 @@ FROM debian:stretch
 LABEL mantainer "hacklab/ <contato@hacklab.com.br>"
 
 ENV USER_NAME=''
-ENV USER_PASSWORD='hacklab'
+ENV USER_PASSWORD=''
 ENV USER_FOLDER=''
  
 RUN apt update && apt install -y \
