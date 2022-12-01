@@ -14,7 +14,7 @@ RUN apt update && apt install -y \
             wget \
             rsync \
             tmux \
-            locale-all \
+            locales-all \
     && apt-get clean -y
 
 RUN mkdir /var/run/sshd && \
