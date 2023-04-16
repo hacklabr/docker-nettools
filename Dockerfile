@@ -15,7 +15,11 @@ RUN apt update && apt install -y \
             rsync \
             tmux \
             locales-all \
+            vim nano \
     && apt-get clean -y
+
+RUN curl https://getmic.ro | bash
+RUN mv micro /usr/local/bin
 
 RUN mkdir /var/run/sshd && \
     sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config && \
