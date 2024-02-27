@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stable
 LABEL mantainer "hacklab/ <contato@hacklab.com.br>"
 
 ENV USER_NAME=''
@@ -16,6 +16,9 @@ RUN apt update && apt install -y \
             tmux \
             locales-all \
             vim nano \
+	    git \
+	    mariadb-client \
+	    postgresql-client \
     && apt-get clean -y
 
 RUN curl https://getmic.ro | bash
